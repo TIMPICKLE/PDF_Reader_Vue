@@ -1,28 +1,64 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="header">
+      <Header></Header>
+    </div>
+   <div class="content flex">
+     <div class="left">
+       <ExportAnnotation></ExportAnnotation>
+
+     </div>
+
+    <div class="right">
+      
+      <router-view>
+         
+      </router-view>
+    </div>
+   </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import  Header  from './components/Header.vue'
+import ExportAnnotation from './views/ExportAnnotation.vue'
 
 export default {
+  //当前组件
   name: 'App',
+  //components 是注册页面中使用的组件
   components: {
-    HelloWorld
+   Header,
+  ExportAnnotation
+
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+ width: 100vw;
+ height: 100vh;
+ display:flex;
+ flex-direction: column;
 }
+
+.header{
+  height: 60px;
+  background: lightcoral;
+}
+
+.left{
+  width: 400px;
+
+  
+}
+.right{
+  flex:1;
+  
+}
+.content{
+  flex:1;
+}
+
 </style>

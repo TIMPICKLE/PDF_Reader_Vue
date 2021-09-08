@@ -1,0 +1,21 @@
+{
+    "short_name": "PDF ANNO",
+    "name": "PDF annotation tool",
+    "icon": [  
+        {
+         "src": "/PWA_Icon.png", 
+         "sizes": "192x192",   
+         "type": "image/png"        },
+        {
+         "src": "/PWA_Icon.png",
+         "sizes": "512x512",
+         "type": "image/png"
+        }
+    ],
+    "start_url": "index.html",  
+    "display": "standalone", 
+    "background_color": "#002140",  
+    "theme_color": "#002140" 
+
+
+}
